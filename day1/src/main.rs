@@ -28,7 +28,7 @@ fn part2(input: &str) -> Result<u32> {
     input
         .lines()
         .map(|line| {
-            let nums = [
+            const NUMS: [(&str, &str); 9] = [
                 ("1", "one"),
                 ("2", "two"),
                 ("3", "three"),
@@ -40,7 +40,7 @@ fn part2(input: &str) -> Result<u32> {
                 ("9", "nine"),
             ];
 
-            let first = nums
+            let first = NUMS
                 .into_iter()
                 .flat_map(|(num, word)| {
                     line.find(num)
@@ -52,7 +52,7 @@ fn part2(input: &str) -> Result<u32> {
                 .map(|(_, num)| num)
                 .context("Error finding minimum index")?;
 
-            let last = nums
+            let last = NUMS
                 .into_iter()
                 .flat_map(|(num, word)| {
                     line.rfind(num)
