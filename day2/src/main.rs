@@ -27,22 +27,22 @@ struct Game {
 }
 
 fn parse_game(line: &str) -> Result<Game> {
-    let (id, remaining) = line.split_once(":").context("No \":\" in line.")?;
+    let (id, remaining) = line.split_once(':').context("No \":\" in line.")?;
     let id = id
-        .split_once(" ")
+        .split_once(' ')
         .context("Error parsing id")?
         .1
         .parse::<u32>()?;
 
     let samples = remaining
-        .split(";")
+        .split(';')
         .map(|sample| {
             sample
-                .split(",")
+                .split(',')
                 .map(|cube| {
                     let (count, color) = cube
                         .trim()
-                        .split_once(" ")
+                        .split_once(' ')
                         .context("Error parsing cube count")?;
                     let count = count.parse()?;
                     Ok((count, color))
