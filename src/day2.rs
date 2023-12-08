@@ -2,7 +2,7 @@ use anyhow::{bail, Context, Result};
 use itertools::Itertools;
 
 fn main() -> Result<()> {
-    let input = include_str!("../input.txt");
+    let input = include_str!("../inputs/day2.txt");
     println!("Part 1 = {}", part1(input)?);
     println!("Part 2 = {}", part2(input)?);
     Ok(())
