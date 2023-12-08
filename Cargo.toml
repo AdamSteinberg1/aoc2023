@@ -31,7 +31,9 @@ path = "src/day6.rs"
 name = "day7"
 path = "src/day7.rs"
 
-
+[[bin]]
+name = "day8"
+path = "src/day8.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -42,3 +44,4 @@ rayon = "1.8.0"
 tap = "1.0.1"
 num-iter = "0.1.43"
 num-traits = "0.2.17"
+num-integer = "0.1.45"

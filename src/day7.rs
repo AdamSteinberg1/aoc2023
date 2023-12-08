@@ -100,7 +100,7 @@ impl Hand {
 
 impl PartialEq for Hand {
     fn eq(&self, other: &Self) -> bool {
-        self.cmp_cards(&other).is_eq()
+        self.cmp_cards(other).is_eq()
     }
 }
 
