@@ -93,6 +93,7 @@ fn count_assuming_damaged(springs: &[Spring], counts: &[usize]) -> usize {
     }
 }
 
+#[allow(unstable_name_collisions)]
 fn unfold(springs: Vec<Spring>, counts: Vec<usize>) -> (Vec<Spring>, Vec<usize>) {
     let springs = repeat(springs)
         .take(5)
