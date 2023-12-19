@@ -79,7 +79,7 @@ fn get_neighbors(
     position: (usize, usize),
     city: &[Vec<usize>],
 ) -> impl Iterator<Item = (usize, usize)> + '_ {
-    Direction::iter().filter_map(move |dir| get_neighbor(position, dir, &city))
+    Direction::iter().filter_map(move |dir| get_neighbor(position, dir, city))
 }
 
 fn manhattan_distance((x1, y1): (usize, usize), (x2, y2): (usize, usize)) -> usize {
