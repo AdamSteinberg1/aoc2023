@@ -29,6 +29,7 @@ dependencies = [
  "num-integer",
  "num-iter",
  "num-traits",
+ "ranges",
  "rayon",
  "tap",
 ]
@@ -219,6 +220,12 @@ checksum = "5267fca4496028628a95160fc423a33e8b2e6af8a5302579e322e4b520293cae"
 dependencies = [
  "proc-macro2",
 ]
+
+[[package]]
+name = "ranges"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f781d391cd4838df77e09fd26e33a87e0ac9bf2edf6ff770cfc65f83d50e3948"
 
 [[package]]
 name = "rayon"
